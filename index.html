@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expression Validator</title>
+</head>
+<body>
+
+  <h2>Expression Validator</h2>
+
+  <!-- Form for selecting validation type and entering input -->
+  <form id="validationForm" onsubmit="return validateExpression()">
+    <label for="validationType">Choose what to validate:</label>
+    <select id="validationType" name="validationType" required>
+      <option value="email">Email</option>
+      <option value="phone">Phone Number</option>
+      <option value="postcode">Post Code</option>
+      <option value="url">URL</option>
+    </select>
+
+    <br><br>
+
+    <label for="inputValue">Enter value:</label>
+    <input type="text" id="inputValue" name="inputValue" required>
+    
+    <br><br>
+    
+    <button type="submit">Validate</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script src = "script.js">
+  </script>
+
+</body>
+</html>
