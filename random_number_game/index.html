@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number game</title>
+</head>
+<body>
+    <script>
+        let low = 1;
+        let high = 10;
+        let correct_ans = Math.floor(Math.random() * (high - low + 1)) + low;
+
+        for (let i = 1; i <= 3; i++) {
+            let user_guess = parseInt(prompt(`Guess a number between ${low} and ${high}`));
+
+            if (user_guess === correct_ans) {
+                alert("You Win!");
+                break;
+            } else if (user_guess < correct_ans) {
+                alert("Correct answer is greater!");
+            } else {
+                alert("Correct answer is smaller!");
+            }
+
+            if (i === 3) {
+                alert("You lose!");
+            }
+        }
+    </script>
+</body>
+</html>
